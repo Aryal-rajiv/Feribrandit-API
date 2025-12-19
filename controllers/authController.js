@@ -101,5 +101,9 @@ export const loginController = async (req, res) => {
     }  
 };
 
+export const authController = async (req, res) => {
+    res.send("The signin middleware is worrking fine");
+};
+
 
 

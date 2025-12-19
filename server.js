@@ -4,6 +4,7 @@ import morgan from 'morgan';
 import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import authRoutes from './routes/authRoute.js';
+import JWT from 'jsonwebtoken';
 
 //configure dotenve
 dotenv.config();
