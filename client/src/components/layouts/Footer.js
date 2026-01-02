@@ -6,7 +6,8 @@ const Footer = () => {
     <div className="footer">
 
       <div className="footer-left">
-           <img src="../assets/images/Ferilogo.png" alt="logo" width="200px" height="80px"></img>
+           <Link to="/"> 
+           <img src="../assets/images/Ferilogo.png" alt="logo" width="200px" height="80px"></img></Link>
            <p>Ethical fashion is the ultimate fashion</p>
       </div>
 

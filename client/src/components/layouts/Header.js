@@ -12,7 +12,7 @@ const Header = () => {
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
             
             <Link to="/" className="navbar-brand" href="#">
-                <img src="../assets/images/Ferilogo.png" alt="logo"  className="nav-logo" /></Link> 
+                <img src="../assets/images/Ferilogo.png" alt="logo" /></Link> 
 
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
               <li className="nav-item">
