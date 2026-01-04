@@ -1,29 +1,50 @@
 import React, { useState} from 'react';
 import Layout from '../../components/layouts/Layout';
-import {toast} from 'react-toastify';
+import toast from 'react-hot-toast';
+import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import '../../styles/authStyle.css';
 
 
 const Register = () => {
 
-                const [name, setName] = useState("")
-                const [email, setEmail] = useState("")
-                const [password, setPassword] = useState("")
-                const [phone, setPhone] = useState("")
-                const [address, setAddress] = useState("")
+                const [name, setName] = useState("");
+                const [email, setEmail] = useState("");
+                const [password, setPassword] = useState("");
+                const [phone, setPhone] = useState("");
+                const [address, setAddress] = useState("");
+                const navigate = useNavigate();
 
-                const handleSubmit = (e) => {
+
+               //handle form submit
+                const handleSubmit = async(e) => {
                     e.preventDefault();
-                    console.log(name, email, password, phone, address);
-                    toast.success("Registered Successfully");
+                    try {
+                        const res =  await axios.post("/api/v1/auth/register",
+                            {name, email, password, phone, address}
+                        );
+                        if(res && res.data.success){
+                            toast.success(res.data &&res.data.message);
+                            navigate("/login");
+                        }
+                        else{
+                            toast.error(res.data.message);
+                        }
+                        
+                    }catch (error){
+                        console.log(error);
+                        toast.error("Something went wrong in registration");
+                    }
+                                   
                 };
 
   return (
        <>
        <Layout title= {"Register - FeriBrandIT"}>
 
-            <div className="register">
-                <h1>Register to FeriBrandIT</h1>
+            <div className="form-container">
                     <form onSubmit={handleSubmit}>
+                        <h1 className="title">Register to FeriBrandIT</h1>
                     <div className="mb-3">
                         <input type="text"
                              className="form-control" 
@@ -78,7 +99,7 @@ const Register = () => {
                          required
                         />
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit</button>
+                    <button type="submit" className="btn btn-primary">Register</button>
                     </form>
             </div>
        </Layout>

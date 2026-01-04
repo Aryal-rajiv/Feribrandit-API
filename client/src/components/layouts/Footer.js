@@ -13,12 +13,12 @@ const Footer = () => {
 
       <div className="footer-right">
           
-          <p className='text-center' mt-3>
+          <p className="text-center mt-3">
           <Link to="/policy">Privacy Policy</Link> |
           <Link to="/about">About Us</Link> |
           <Link to="/contact">Contact Us</Link> |
           </p>
-          <h4 className='text-center'> All right reserved &copy; Feribrandit</h4>
+          <h4 className="text-center"> All right reserved &copy; Feribrandit</h4>
       </div>
     </div>
   )
