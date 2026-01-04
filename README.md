@@ -1,9 +1,9 @@
-## Feribrandit-App is a Fullstack website based on sustainable fashion. 
+## Feribrandit-App is a full-stack website based on sustainable fashion. 
 
 ## Frontend
 React
 
-## Backkend
+## Backend
 Express
 Node
 MongoDB
