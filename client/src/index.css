@@ -132,12 +132,3 @@
   text-align: justify;      
   }
 
-  /*=====================Register Page Styles ==================*/
-  .register{
-    display: flex;
-    justify-content:center;
-    align-items:center;
-    height: 70vh;
-    font-family: "Poppins", sans-serif;
-    flex-direction: column;
-  }

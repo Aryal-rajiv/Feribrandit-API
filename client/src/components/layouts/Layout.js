@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import {Helmet} from 'react-helmet';
-  import { ToastContainer } from 'react-toastify';
+import { Toaster } from 'react-hot-toast';
 
 
 const Layout = ({children, title, description, keyword, author}) => {
@@ -18,8 +18,9 @@ const Layout = ({children, title, description, keyword, author}) => {
         </Helmet>
         <Header/>
         <main style={{ minHeight: "70vh" }}>\
-             <ToastContainer/>
+             <Toaster/>
              {children}
+             
         </main>
         <Footer/>      
     </div>
@@ -33,4 +34,4 @@ Layout.defaultProps ={
   author: "Aryal Rajiv"
 };
 
-export default Layout
+export default Layout;
