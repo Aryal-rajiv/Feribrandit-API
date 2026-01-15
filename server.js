@@ -7,7 +7,7 @@ import authRoutes from './routes/authRoute.js';
 import JWT from 'jsonwebtoken';
 import cors from 'cors';
 
-//configure dotenve
+//configure dotenve\
 dotenv.config();
 
 const port = process.env.PORT;
