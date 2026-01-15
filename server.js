@@ -5,8 +5,9 @@ import dotenv from 'dotenv';
 import connectDB from './config/db.js';
 import authRoutes from './routes/authRoute.js';
 import JWT from 'jsonwebtoken';
+import cors from 'cors';
 
-//configure dotenve
+//configure dotenve\
 dotenv.config();
 
 const port = process.env.PORT;
@@ -14,6 +15,7 @@ connectDB();
 const app= express();
 
 //Middlewares
+app.use(cors());
 app.use(morgan('dev'));
 app.use(express.json());
 
