@@ -3,17 +3,17 @@ import React, { useEffect, useState } from 'react';
 
 const Spinner = () => {
     const [count, setCount] = useState(5);
-    const navigate = useNavigate;
+    const navigate = useNavigate();
 
     useEffect( ()=> {
         const interval = setInterval(() =>{
             setCount((prevValue) => --prevValue);
-        }, 1000)
+        }, 1000);
 
         count === 0 && navigate('/login');
         return() => clearInterval(interval);
 
-    }, [count, navigate])
+    }, [count, navigate]);
   return (
     <>
         <div className="d-flex flex-column justify-content-center align-items-center" style={{height: "80vh" }}>
@@ -25,7 +25,7 @@ const Spinner = () => {
         </div>
 
     </>
-  )
+  );
 };
 
 export default Spinner;
